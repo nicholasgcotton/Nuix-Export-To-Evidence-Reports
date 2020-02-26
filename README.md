@@ -7,14 +7,18 @@ Purpose: Export documents from Nuix with the following file structure (similar t
 
 Documents: Optionall a) PDFs, b) Natives of kind:spreadsheet c) Natives of all kinds d) PDFs with markup (vetting) [only avaiable with EXPORT_LEGAL license]
 
-Task Number = T###
-Task Action Number = TA###
-Item Number = _######
+Task Number = T(NUMBER)
+Task Action Number = TA(NUMBER)
+Item Number = _(NUMBER)
 
 such the file(s) for Task 1, Task Action 2 would be in the form
+
 T1_TA2_000001.CSV - INVENTORY REPORT
+
 T1_TA2_000002.PDF - PDF DOCUMENT
+
 T1_TA2_000002.XLS - NATIVE DOCUMENT (Same filename root as the PDF copy of the same document)
+
 rT1_TA2_000001.PDF - PDF DOCUMENT WITH MARKUP (aka VETTING) as applied from within Nuix. Same file name as the PDF COPY, preceeded by "r". 
 
 This script requires the NX.jar: https://github.com/Nuix/Nx
