@@ -26,9 +26,12 @@ T1_TA2_000002.XLS - NATIVE DOCUMENT (Same filename root as the PDF copy of the s
 
 rT1_TA2_000001.PDF - PDF DOCUMENT WITH MARKUP (aka VETTING) as applied from within Nuix. Same file name as the PDF COPY, preceeded by "r". 
 
-This script requires the NX.jar: https://github.com/Nuix/Nx
-This script uses Nuix API calls documented: https://download.nuix.com/releases/desktop/stable/docs/en/scripting/api/index.html
-This script would not have been possible without the support of the Nuix tech support team, and all the code samples on https://github.com/Nuix.
+Notes:
+1) This script requires the NX.jar: https://github.com/Nuix/Nx
+2) This script uses Nuix API calls documented: https://download.nuix.com/releases/desktop/stable/docs/en/scripting/api/index.html
+
+Thanks
+1) This script would not have been possible without the support of the Nuix tech support team, and all the code samples on https://github.com/Nuix.
 
 To Do List:
 1) Add license checks to avoid attempting EXPORT_LEGAL (documents with markup) when it will fail.
