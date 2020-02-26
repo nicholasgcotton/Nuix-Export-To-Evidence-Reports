@@ -31,3 +31,6 @@ To Do List:
 3) Add ability to export all or some markup sets (currently locked to all). 
 4) Add process dialog (borrow code from https://github.com/Nuix/Nukers). 
 5) Check for depreciated API calls and update as required for Nuix >8. 
+
+Known Bugs:
+1) When exporting documents with markup (vetted documents) a Production set is created. Issue: Gives the appearance of a production set for every export, which is not the case. Current solution: ignore production sets. Goal Solution: Delete unnecessary production set after export is complete.
