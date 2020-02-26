@@ -5,7 +5,12 @@ This is a ruby script for use with Nuix Investigative Workstation or Nuix eDisco
 
 Purpose: Export documents from Nuix with the following file structure (similar to legal export).
 
-Documents: Optionall a) PDFs, b) Natives of kind:spreadsheet c) Natives of all kinds d) PDFs with markup (vetting) [only avaiable with EXPORT_LEGAL license]
+Documents: 
+Optionally 
+a) PDFs, 
+b) Natives of kind:spreadsheet 
+c) Natives of all kinds 
+d) PDFs with markup (vetting) [only avaiable with EXPORT_LEGAL license]
 
 Task Number = T(NUMBER)
 Task Action Number = TA(NUMBER)
