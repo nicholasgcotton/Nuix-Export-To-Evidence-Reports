@@ -96,7 +96,7 @@ If requested the script will create a T#_TA#.TXT file with the following text.
 2) This script uses Nuix API calls documented: https://download.nuix.com/releases/desktop/stable/docs/en/scripting/api/index.html
 
 ## Thanks
-1) This script would not have been possible without the support of the Nuix tech support team, and all the code samples on https://github.com/Nuix.
+1) This script would not have been possible without the support of the @Nuix tech support team, and all the code samples on https://github.com/Nuix.
 
 ### To Do List:
 1) Add license checks to avoid attempting EXPORT_LEGAL (documents with markup) when it will fail.
@@ -110,3 +110,19 @@ If requested the script will create a T#_TA#.TXT file with the following text.
 
 ### Known Issues
 1) Due to a limitation within Nuix multiple vetting codes applied on top of each other will not all show. The vetting boxes will be placed as expected, but only the "top" vetting/markup code will be shown. Workaround: Instead of applying multiple vetting codes apply one redaction with multiple labels. 
+
+## License
+
+Copyright [2020] Nicholas Grant Cotton
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
