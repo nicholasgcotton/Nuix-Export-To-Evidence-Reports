@@ -110,8 +110,7 @@ If requested the script will create a T#_TA#.TXT file with the following text.
 1) When exporting documents with markup (vetted documents) a Production set is created. Issue: Gives the appearance of a production set for every export, which is not the case. Current solution: ignore production sets. Goal Solution: Delete unnecessary production set after export is complete.
 
 ### Known Issues
-1) Due to a limitation within Nuix multiple vetting codes applied on top of each other will not all show. The vetting boxes will be placed as expected, but only the "top" vetting/markup code will be shown. Workaround: Instead of applying multiple vetting codes apply one redaction with multiple labels. 
-2) Due to a limitation within Nuix there is no option to box markup areas without actually applying the vetting.
+1) Due to a limitation within Nuix there is no option to show the box around markup areas without actually applying the vetting.
 
 ## License
 
