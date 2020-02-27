@@ -38,7 +38,7 @@ Export documents from Nuix with a file structure approprioate for use with RCMP 
 
 ## Inventory Load file Specifications
 
-Load File Item | Sourced From
+Load File Item | Sourced From (Nuix API call)
 ------------ | -------------
 Filename/ExportID | Generated from the Task and Task Action numbers provided by the user. 
 ExportID-Duplicates | List of any previous ExportIDs for that item.
@@ -48,15 +48,15 @@ RE | User input
 Document Type | User input
 Document Description | User input
 Document Summary | Comment (item.comment)
-Source | User input (defaults to Nuix case name)
-Document Date | Item Date in local timezone
-Document Time | Item Time in local timezone
-Original File Name | Original Filename (item.name), duplicates "Document Title" as that column may need to be shortened for use in E&R
+Source | User input or current case name ($current_case.name)
+Document Date | Item Date in local timezone (Time.parse("#{item.date}") + getLocal)
+Document Time | Item Time in local timezone (Time.parse("#{item.date}") + getLocal)
+Original File Name | Original Filename (item.name), same as "Document Title" since that column may need to be shortened for use in E&R
 Original File Type | Nuix file kind (item.kind.getLocalisedName)
 Evidence Path | Original path of item (item.getLocalisedPathNames)
 Attached or Embedded Items | Material Child Items (item.getchildren + isAudited)
-Nuix GUID | Nuix GUID unique ID
-Hash Values | MD5/SHA1 hash values for item
+Nuix GUID | Nuix GUID unique ID (item.guid)
+Hash Values | All hash values calculated for the item (e.g. MD5/SHA1) (item.digests)
 
 ## Task Action Report Text Specifications
 
