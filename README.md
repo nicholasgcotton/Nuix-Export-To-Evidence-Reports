@@ -7,6 +7,16 @@ This is a ruby script for use with Nuix Investigative Workstation or Nuix eDisco
 
 Export documents from Nuix with a file structure approprioate for use with RCMP E&R III, including an inventory load file in CSV format that can be used to load all items exported from Nuix directly into E&R. 
 
+## Installation
+- Download [Export by Tag to E&R v1.7 Vetting.rb](https://github.com/nicholasgcotton/NuixExportToEvidence-Reports/blob/master/Export%20by%20Tag%20to%20E%26R%20v1.7%20Vetting.rb)
+- Download [NX.jar](https://github.com/Nuix/Nx)
+- Install both files to one of the Nuix scripts directories, on Windows, for example:
+  - %appdata%\Nuix\Scripts - User level script directory
+  - %programdata%\Nuix\Scripts - System level script directory
+- Optional: Download [Export Load File.profile](https://github.com/nicholasgcotton/NuixExportToEvidence-Reports/blob/master/Export%20Load%20File.profile) and install to one of the Nuix Metadata Profiles directories, on Windows, for example
+  - %appdata%\Nuix\Metadata Profiles - User level script directory
+  - %programdata%\Nuix\Metadata Profiles - System level script directory
+
 ## Production Options:
 - Documents (Any/All as needed)
   - PDFs, 
@@ -37,6 +47,8 @@ Export documents from Nuix with a file structure approprioate for use with RCMP 
 ![UserInterface_V1 7](https://user-images.githubusercontent.com/24242174/75466153-c166fb80-5957-11ea-9f01-d06dd7f0203f.png)
 
 ## Inventory Load file Specifications
+
+If requested, the script will create a T#_TA#####1.CSV file with the following information.
 
 Load File Item | Sourced From (Nuix API call)
 ------------ | -------------
