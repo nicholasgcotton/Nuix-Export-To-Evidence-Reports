@@ -7,15 +7,19 @@ This is a ruby script for use with Nuix Investigative Workstation or Nuix eDisco
 
 Export documents from Nuix with a file structure approprioate for use with RCMP E&R III, including an inventory load file in CSV format that can be used to load all items exported from Nuix directly into E&R. 
 
-## Installation
+## Installation (Required)
+For the script to function you must: 
 - Download [Export by Tag to E&R v1.7 Vetting.rb](https://github.com/nicholasgcotton/NuixExportToEvidence-Reports/blob/master/Export%20by%20Tag%20to%20E%26R%20v1.7%20Vetting.rb)
 - Download [NX.jar](https://github.com/Nuix/Nx)
 - Install both files to one of the Nuix scripts directories, on Windows, for example:
   - %appdata%\Nuix\Scripts - User level script directory
   - %programdata%\Nuix\Scripts - System level script directory
-- Optional: Download [Export Load File.profile](https://github.com/nicholasgcotton/NuixExportToEvidence-Reports/blob/master/Export%20Load%20File.profile) and install to one of the Nuix Metadata Profiles directories, on Windows, for example
-  - %appdata%\Nuix\Metadata Profiles - User level script directory
-  - %programdata%\Nuix\Metadata Profiles - System level script directory
+
+### Installation (Optional)
+If you wish to view the ExportID and ExportID-Duplicates values within Nuix Workstation you can create a metadata profile that shows those custom metadata values. Alternatively, the "Export Load File.profile" below mirrors the inventory load file created by the script.
+- Download [Export Load File.profile](https://github.com/nicholasgcotton/NuixExportToEvidence-Reports/blob/master/Export%20Load%20File.profile) and install to one of the Nuix Metadata Profiles directories, on Windows, for example:
+  - %appdata%\Nuix\Metadata Profiles - User level Metadata Profile directory
+  - %programdata%\Nuix\Metadata Profiles - System level Metadata Profile directory
 
 ## Production Options:
 - Documents (Any/All as needed)
