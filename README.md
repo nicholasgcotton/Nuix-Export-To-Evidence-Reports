@@ -48,7 +48,7 @@ Export documents from Nuix with a file structure approprioate for use with RCMP 
 
 ## Inventory Load file Specifications
 
-If requested, the script will create a T#_TA#####1.CSV file with the following information.
+If requested, the script will create a T#_TA#_000001.CSV file with the following information.
 
 Load File Item | Sourced From (Nuix API call)
 ------------ | -------------
@@ -72,7 +72,7 @@ Hash Values | All hash values calculated for the item (e.g. MD5/SHA1) (item.dige
 
 ## Task Action Report Text Specifications
 
-If requested the script will create a T#_TA######.TXT file with the following text. 
+If requested the script will create a T#_TA#.TXT file with the following text. 
 
 > Nuix Export from Tag:{tag}
 >
