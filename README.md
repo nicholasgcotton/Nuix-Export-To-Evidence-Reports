@@ -89,7 +89,7 @@ If requested the script will create a T#_TA#.TXT file with the following text.
 >
 > Attachments
 > 01 #{evidence_DESCRIPTION}: INVENTORY SPREADSHEET
-
+>
 > Inventory spreadsheet describing #{count_items} items exported from tag \"#{tag}\" to #{task_taskaction} on #{report_date}. Items are numbered from 2 to #{last_attachment}, this inventory spreadsheet is item 1. ")
 
 ## Notes:
