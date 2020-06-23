@@ -113,9 +113,10 @@ If requested the script will create a T#_TA#.TXT file with the following text.
 ### Known Bugs:
 1) When exporting documents with markup (vetted documents) a Production set is created. Issue: Gives the appearance of a production set for every export, which is not the case. Current solution: ignore production sets. Goal Solution: Delete unnecessary production set after export is complete.
 2) Crashes when attempting to export items (either PDFs or Natives) that are not accessible (in the case of PDFs this means not generated, in the case of natives this most likely means your evidence has moved). Workaround: Use Nuix feature "populate stores" for the PDFs or Natives on the items you wish to export before calling the script. 
+3) Script sorts items by TopLevelITem date to ensure attachments follow their parent emails, regardless of the date of the attachment. For some reason it's occassionally possible to have PST files with no date attribute in Nuix. There is a work around for this, please get in touch if you need it. 
 
-### Known Issues
-1) Due to a limitation within Nuix there is no option to show the box around markup areas without actually applying the vetting.
+### Known Limitiations
+1) Due to a limitation within Nuix there is no option to show the border/box around markup areas without actually applying the vetting and blacking out that area. (
 
 ## License
 
