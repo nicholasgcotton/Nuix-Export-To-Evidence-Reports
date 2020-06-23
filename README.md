@@ -50,6 +50,7 @@ If you wish to view the ExportID and ExportID-Duplicates values within Nuix Work
 - Main User Interface
 
 ![UserInterface_V1 7](https://user-images.githubusercontent.com/24242174/75466153-c166fb80-5957-11ea-9f01-d06dd7f0203f.png)
+(Note: "Export Markup", "Apply Highlights", and "Apply Redactions" options will only show when using Nuix eDiscovery Workstation with the "legal export" license feature.)
 
 ## Inventory Load file Specifications
 
@@ -59,7 +60,7 @@ Load File Item | Sourced From (Nuix API call)
 ------------ | -------------
 Filename/ExportID | Generated from the Task and Task Action numbers provided by the user. 
 ExportID-Duplicates | List of any previous ExportIDs for that item.
-Vetting Codes | Any markup applied to the item within Nuix (item.getMarkupSets)
+Vetting Codes | Any markup applied to the item within Nuix (item.getMarkupSets), or hardcoded to "Vetting Not in Use" when that license feature is not supported.
 Document Title | Original Filename (item.name)
 RE | User input
 Document Type | User input
@@ -106,11 +107,12 @@ If requested the script will create a T#_TA#.TXT file with the following text.
 4) Check for depreciated API calls and update as required for Nuix >8. 
 5) Add check for populated-stores for exporting each document type (PDF, Native). Currently it will fail badly if/when you attempt to export data that does not exist or is not available to the Nuix workstation app (e.g. if you have moved the evidence files and try to export natives). Workaround: populate stores (PDF/Native) of the type you intend to export ahead of time.
 
-## Completed Items
-1) As of v1.71: Add license checks to avoid attempting EXPORT_LEGAL (documents with markup) when it will fail.
+#### Completed Items
+1) As of v1.71: Add license checks to avoid attempting EXPORT_LEGAL (documents with markup) when it will fail. Uses code from: https://github.com/Nuix/Export-Family-PDFs
 
 ### Known Bugs:
 1) When exporting documents with markup (vetted documents) a Production set is created. Issue: Gives the appearance of a production set for every export, which is not the case. Current solution: ignore production sets. Goal Solution: Delete unnecessary production set after export is complete.
+2) Crashes when attempting to export items (either PDFs or Natives) that are not accessible (in the case of PDFs this means not generated, in the case of natives this most likely means your evidence has moved). Workaround: Use Nuix feature "populate stores" for the PDFs or Natives on the items you wish to export before calling the script. 
 
 ### Known Issues
 1) Due to a limitation within Nuix there is no option to show the box around markup areas without actually applying the vetting.
