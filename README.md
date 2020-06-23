@@ -9,7 +9,7 @@ Export documents from Nuix with a file structure approprioate for use with RCMP 
 
 ## Installation (Required)
 For the script to function you must: 
-- Download [Export by Tag to E&R v1.7 Vetting.rb](https://github.com/nicholasgcotton/NuixExportToEvidence-Reports/blob/master/Export%20by%20Tag%20to%20E%26R%20v1.7%20Vetting.rb)
+- Download [Export by Tag to E&R v1.71 Vetting.rb](https://github.com/nicholasgcotton/NuixExportToEvidence-Reports/blob/master/Export%20by%20Tag%20to%20E%26R%20v1.71%20Vetting.rb)
 - Download [NX.jar](https://github.com/Nuix/Nx)
 - Install both files to one of the Nuix scripts directories, on Windows, for example:
   - %appdata%\Nuix\Scripts - User level script directory
@@ -100,11 +100,14 @@ If requested the script will create a T#_TA#.TXT file with the following text.
 1) This script would not have been possible without the support of the @Nuix tech support team, and all the code samples on https://github.com/Nuix.
 
 ### To Do List:
-1) Add license checks to avoid attempting EXPORT_LEGAL (documents with markup) when it will fail.
-2) Add additional options for "SOURCE" column in the report CSV inventory file (item.custodian, custom metadata, case name, manual input).
-3) Add ability to export all or some markup sets (currently locked to all). 
-4) Add process dialog (borrow code from https://github.com/Nuix/Nukers). 
-5) Check for depreciated API calls and update as required for Nuix >8. 
+1) Add additional options for "SOURCE" column in the report CSV inventory file (item.custodian, custom metadata, case name, manual input).
+2) Add ability to export all or some markup sets (currently locked to all). 
+3) Add process dialog (borrow code from https://github.com/Nuix/Nukers). 
+4) Check for depreciated API calls and update as required for Nuix >8. 
+5) Add check for populated-stores for exporting each document type (PDF, Native). Currently it will fail badly if/when you attempt to export data that does not exist or is not available to the Nuix workstation app (e.g. if you have moved the evidence files and try to export natives). Workaround: populate stores (PDF/Native) of the type you intend to export ahead of time.
+
+## Completed Items
+1) As of v1.71: Add license checks to avoid attempting EXPORT_LEGAL (documents with markup) when it will fail.
 
 ### Known Bugs:
 1) When exporting documents with markup (vetted documents) a Production set is created. Issue: Gives the appearance of a production set for every export, which is not the case. Current solution: ignore production sets. Goal Solution: Delete unnecessary production set after export is complete.
