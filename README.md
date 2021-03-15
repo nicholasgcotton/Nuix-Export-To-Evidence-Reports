@@ -120,7 +120,7 @@ If requested the script will create a T#_TA#.TXT file with the following text.
 
 ## License
 
-Copyright [2020] Nicholas Grant Cotton
+Copyright [2020-2021] Nicholas Grant Cotton
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
