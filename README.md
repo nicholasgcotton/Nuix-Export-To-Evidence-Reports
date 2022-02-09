@@ -27,7 +27,7 @@ If you wish to view the ExportID and ExportID-Duplicates values within Nuix Work
   - Natives of kind:spreadsheet, 
   - Natives of all kinds, 
   - Emails in .EML format (RFC822) (converted if necessary).
-  - PDFs with markup (vetting) [only avaiable with EXPORT_LEGAL license].
+  - PDFs with markup (vetting) [only avaiable with EXPORT_LEGAL license and FAST_REVIEW].
 - Load File (Recommended)
 - Task Action report text (Optional)
 
