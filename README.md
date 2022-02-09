@@ -9,7 +9,7 @@ Export documents from Nuix with a file structure approprioate for use with RCMP 
 
 ## Installation (Required)
 For the script to function you must: 
-- Download [Export by Tag to E&R v1.72 Vetting.rb](https://github.com/nicholasgcotton/NuixExportToEvidence-Reports/blob/master/Export%20by%20Tag%20to%20E%26R%20v1.72%20Vetting.rb)
+- Download [Export by Tag to E&R v2.0 Vetting.rb](https://github.com/nicholasgcotton/NuixExportToEvidence-Reports/blob/master/Export%20by%20Tag%20to%20E%26R%202.0%20(Vetting%20Supported))
 - Download [NX.jar](https://github.com/Nuix/Nx)
 - Install both files to one of the Nuix scripts directories, on Windows, for example:
   - %appdata%\Nuix\Scripts - User level script directory
