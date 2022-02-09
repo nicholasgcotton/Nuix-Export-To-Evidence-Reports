@@ -38,9 +38,11 @@ If you wish to view the ExportID and ExportID-Duplicates values within Nuix Work
 ### Resulting files (example input T1_TA2)
 - T1_TA2.TXT - TASK ACTION (EXPORT REPORT)
 - T1_TA2_000001.CSV - INVENTORY REPORT
-- T1_TA2_000002.PDF - PDF DOCUMENT
-- T1_TA2_000002.XLS - NATIVE DOCUMENT (Same filename root as the PDF copy of the same document)
-- rT1_TA2_000001.PDF - PDF DOCUMENT WITH MARKUP (aka VETTING) as applied from within Nuix. Same file name as the PDF COPY, preceeded by "r". 
+- PDF\T1_TA2_000002.PDF - PDF DOCUMENT
+- NATIVES\T1_TA2_000002.MSG - NATIVE DOCUMENT (Same filename root as the PDF copy of the same document)
+- EML\T1_TA200001.EML - EML (RFC822) DOCUMENT (Same filename root as PDF copy of the same document) Only valid for email files.
+- PDF\rT1_TA2_000001.PDF - PDF DOCUMENT WITH MARKUP (aka VETTING) as applied from within Nuix. Same file name as the PDF COPY, preceeded by "r". 
+ 
 
 ## User Interface
 - Instructions Popup Window
@@ -102,13 +104,13 @@ If requested the script will create a T#_TA#.TXT file with the following text.
 
 ### To Do List:
 1) Add additional options for "SOURCE" column in the report CSV inventory file (item.custodian, custom metadata, case name, manual input).
-2) Add ability to export all or some markup sets (currently locked to all). 
-3) Add process dialog (borrow code from https://github.com/Nuix/Nukers). 
-4) Check for depreciated API calls and update as required for Nuix >8. 
-5) Add check for populated-stores for exporting each document type (PDF, Native). Currently it will fail badly if/when you attempt to export data that does not exist or is not available to the Nuix workstation app (e.g. if you have moved the evidence files and try to export natives). Workaround: populate stores (PDF/Native) of the type you intend to export ahead of time.
+2) Add ability to export all or some markup sets (currently locked to all).  
+3) Check for depreciated API calls and update as required for Nuix >8. 
+4) Add check for populated-stores for exporting each document type (PDF, Native). Currently it will fail badly if/when you attempt to export data that does not exist or is not available to the Nuix workstation app (e.g. if you have moved the evidence files and try to export natives). Workaround: populate stores (PDF/Native) of the type you intend to export ahead of time.
 
 #### Completed Items
-1) As of v1.71: Add license checks to avoid attempting EXPORT_LEGAL (documents with markup) when it will fail. Uses code from: https://github.com/Nuix/Export-Family-PDFs
+1) As of v1.71: Add license checks to avoid attempting EXPORT_LEGAL (documents with markup) when it will fail. Uses code from: https://github.com/Nuix/Export-Family-PDFs (Fixed with correct license call in 2.0.)
+2) Add process dialog (borrow code from https://github.com/Nuix/Nukers) in version 2.0.
 
 ### Known Bugs:
 1) When exporting documents with markup (vetted documents) a Production set is created. Issue: Gives the appearance of a production set for every export, which is not the case. Current solution: ignore production sets. Goal Solution: Delete unnecessary production set after export is complete.
@@ -120,7 +122,7 @@ If requested the script will create a T#_TA#.TXT file with the following text.
 
 ## License
 
-Copyright [2020-2021] Nicholas Grant Cotton
+Copyright [2020-2022] Nicholas Grant Cotton
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
