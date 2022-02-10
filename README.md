@@ -9,7 +9,7 @@ Export documents from Nuix with a file structure approprioate for use with RCMP 
 
 ## Installation (Required)
 For the script to function you must: 
-- Download [Export by Tag to E&R v2.0 Vetting.rb](https://github.com/nicholasgcotton/NuixExportToEvidence-Reports/blob/master/Export%20by%20Tag%20to%20E%26R%202.0%20(Vetting%20Supported))
+- Download [Export by Tag to E&R v2.01 Vetting.rb](https://github.com/nicholasgcotton/NuixExportToEvidence-Reports/blob/master/Export%20by%20Tag%20to%20E&R%202.01%20(Vetting%20Supported).rb)
 - Download [NX.jar](https://github.com/Nuix/Nx)
 - Install both files to one of the Nuix scripts directories, on Windows, for example:
   - %appdata%\Nuix\Scripts - User level script directory
@@ -48,12 +48,16 @@ If you wish to view the ExportID and ExportID-Duplicates values within Nuix Work
 ## User Interface
 - Instructions Popup Window
 
-![Instructions_V1 7](https://user-images.githubusercontent.com/24242174/75466151-c0ce6500-5957-11ea-9718-591115734632.png)
+![Instructions_V2.01](https://user-images.githubusercontent.com/24242174/153434064-44361fce-b8bf-45bd-b971-2d3a01cc8f58.PNG)
 
 - Main User Interface
 
-![UserInterface_V1 7](https://user-images.githubusercontent.com/24242174/75466153-c166fb80-5957-11ea-9f01-d06dd7f0203f.png)
+![UserInterface_V2.01](https://user-images.githubusercontent.com/24242174/153434068-5df8a35d-a8e2-409d-a2d5-628d7cf709a5.PNG)
 (Note: "Export Markup", "Apply Highlights", and "Apply Redactions" options will only show when using Nuix eDiscovery Workstation with the "legal export" license feature.)
+
+- Progress Reporting & Results
+
+![Progress Reporting V2.01](https://user-images.githubusercontent.com/24242174/153434071-1152c6a4-2b68-4067-a5cb-91550c2aa426.PNG)
 
 ## Inventory Load file Specifications
 
