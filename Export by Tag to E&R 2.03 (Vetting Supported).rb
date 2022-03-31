@@ -1,7 +1,7 @@
 ######################################################################################
 # ///// Nuix Interpreted Comments BEGIN
 # Needs Case: true
-# Menu Title: Export by Tag to E&R v2.01 (Vetting Supported)
+# Menu Title: Export by Tag to E&R v2.03 (Vetting Supported)
 # encoding: utf-8
 # ///// Nuix Interpreted Comments END
 # Updates for this script are published at https://github.com/nicholasgcotton/NuixExportToEvidence-Reports
@@ -10,6 +10,10 @@
 # Export to E&R Code from Export to E&R v 3A6
 # Author: Nicholas COTTON
 # Changelog: 
+# 2022-03-30
+# 2.03
+# Fixed v8 license check API call.
+# Added santity check for EXPORT_ITEMS vs EXPORT_LEGAL
 # 2022-02-09 2.01
 # Fixed progress % reproting.
 # 2022-02-09 2.0
@@ -68,7 +72,7 @@ evidence_source = $current_case.name		#For a better then nothing value in the "s
 puts "Licence type is #{current_licence.getShortName}"
 puts "Nuix Version is #{NUIX_VERSION}"
 if NUIX_VERSION.to_f > 8
-	puts "Licence features are #{current_licence.getallEnabledFeatures}"
+	puts "Licence features are #{current_licence.get_all_enabled_features}"
 else
 	puts "Unable to list all Nuix license features for this version of Nuix. Checking all features manually."
 	puts "Has feature LOTUS_NOTES: #{current_licence.hasFeature("LOTUS_NOTES")}."
@@ -107,15 +111,29 @@ end
 ###########################
 # Instructions Popup Window
 ###########################
-javax.swing.JOptionPane.showMessageDialog(nil, "Instructions:
-1. Select the single tag for the items you wish to export. 
-2. Choose Export Options (PDFs, spreadsheets, other native files.)
-3. Create/Choose a new empty export directory.
-4. Entere a new unique T#_TA# for your export.
-5. Change Source/RE/Type/Description values to match E&R task (if known).
-6. Check desired vetting/redaction settings.
-8. Hit Ok and Confirm. 
-NOTE: Script is not complete until you are notified by another pop-up.")
+if !current_licence.hasFeature("EXPORT_LEGAL")
+	javax.swing.JOptionPane.showMessageDialog(nil, "Instructions:
+	NOTE: This license does not include the neceesary features to autopopulate exported items. 
+	You MUST populate binary stores or native stores before attempting to run an export.
+	1. Select the single tag for the items you wish to export. 
+	2. Choose Export Options (PDFs, spreadsheets, other native files.)
+	3. Create/Choose a new empty export directory.
+	4. Entere a new unique T#_TA# for your export.
+	5. Change Source/RE/Type/Description values to match E&R task (if known).
+	6. Check desired vetting/redaction settings.
+	8. Hit Ok and Confirm. 
+	NOTE: Script is not complete until you are notified by another pop-up.")
+	else
+		javax.swing.JOptionPane.showMessageDialog(nil, "Instructions:
+		1. Select the single tag for the items you wish to export. 
+		2. Choose Export Options (PDFs, spreadsheets, other native files.)
+		3. Create/Choose a new empty export directory.
+		4. Entere a new unique T#_TA# for your export.
+		5. Change Source/RE/Type/Description values to match E&R task (if known).
+		6. Check desired vetting/redaction settings.
+		8. Hit Ok and Confirm. 
+		NOTE: Script is not complete until you are notified by another pop-up.")
+end
 ####################
 # Create GUI Window
 ####################
