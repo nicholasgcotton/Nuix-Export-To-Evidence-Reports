@@ -3,6 +3,8 @@ Nuix API Script to support exporting data from Nuix Workstation to Evidence & Re
 
 This is a ruby script for use with Nuix Investigative Workstation or Nuix eDiscovery workstation (www.nuix.com).
 
+For a list of other useful Nuix scripts, see: https://github.com/nicholasgcotton/Nuix-Scripts
+
 ## Purpose: 
 
 Export documents from Nuix with a file structure approprioate for use with RCMP E&R III, including an inventory load file in CSV format that can be used to load all items exported from Nuix directly into E&R. 
