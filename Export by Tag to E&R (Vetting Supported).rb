@@ -1,7 +1,7 @@
 ######################################################################################
 # ///// Nuix Interpreted Comments BEGIN
 # Needs Case: true
-# Menu Title: Export by Tag to E&R v2.03 (Vetting Supported)
+# Menu Title: Export by Tag to E&R v2.04 (Vetting Supported)
 # encoding: utf-8
 # ///// Nuix Interpreted Comments END
 # Updates for this script are published at https://github.com/nicholasgcotton/NuixExportToEvidence-Reports
@@ -10,6 +10,8 @@
 # Export to E&R Code from Export to E&R v 3A6
 # Author: Nicholas COTTON
 # Changelog: 
+# 2024-01-23
+# Added support to catch missing extensions on MSG items.
 # 2022-03-30
 # 2.03
 # Fixed v8 license check API call.
@@ -372,6 +374,11 @@ ProgressDialog.forBlock do |progress_dialog|
 					if kind == "spreadsheet" && extension.nil?
 						extension = "csv" # Ugly but it works, redux.
 					end
+                    if kind = "email" && extension.nil?
+                        extension = "msg" # Ugly but it should work
+                        # This is a hack and it would be better to somehow
+                        # look up the correct extension for each item, but for now this will work.
+                    end
 					native_file_name = "#{id_num}.#{extension}"
 					native_export_file_path = File.join(native_directory,native_file_name)
 					native_exporter.exportItem(item,native_export_file_path)
